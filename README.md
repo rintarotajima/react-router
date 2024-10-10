@@ -1,8 +1,14 @@
-# React + Vite
+# React Routerについて
+## Reactを用いて作成したSPAに対して、UIとURLを対応付けるためのライブラリ。  
+### Todoアプリの場合、
+### 「sample.com/todo」にアクセスした時にはログインページを表示するLoginコンポーネントをレンダリングし、
+### 「sample.com/todo」にアクセスした時にはTodo一覧表示するコンポーネントをレンダリングするといった操作が可能になる。  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Browserコンポーネントを用いてルーティングを有効にする
+#### Linkコンポーネントを用い、toプロパティに指定したURLに飛ぶ。（UIは変わらない）
+#### Switchコンポーネントの中で、Routeコンポーネントを用い、pathプロパティに遷移したいURLを指定し、表示したいコンポーネントを囲む。
+#### Routeコンポーネントのrenderプロパティは動的にルーティングを制御する。
+#### Routeコンポーネントにexactプロパティを用いることで、完全一致したパスだけにしか飛ばないようにする。
+### ルート定義の分割は、実際にルーティングを記述するSwitchコンポーネント全体をルーティング処理コンポーネントということでフォルダを作り、専用のコンポーネントを作成し、ルーティングの細かい処理もmapメソッドを使う。
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
