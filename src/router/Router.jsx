@@ -41,7 +41,6 @@ export const Router = () => {
           </Switch>
         )}
       />
-
     </Switch>
   );
 };
